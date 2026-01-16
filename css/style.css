@@ -32,46 +32,62 @@
     font-size: 18px;
 }
 
-/* HEADER */
+/* ======================
+   RESPONSIVE HEADER
+====================== */
+
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background: white;
+    justify-content: space-between;
+    gap: 20px;
+    padding: clamp(10px, 2vw, 20px) clamp(15px, 4vw, 40px);
+    background: #fff;
+    flex-wrap: wrap;
 }
 
+/* LOGO AREA */
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: clamp(8px, 1.5vw, 15px);
+    flex-wrap: wrap;
 }
 
 .logo img {
-    height: 60px;
+    height: clamp(45px, 6vw, 65px);
 }
 
+/* TEXT SCALING */
 .logo h1 {
-    font-size: 40px;
+    font-size: clamp(22px, 4vw, 40px);
+    line-height: 1.1;
+}
+
+.logo p {
+    font-size: clamp(14px, 2vw, 18px);
+    letter-spacing: clamp(2px, 0.6vw, 4px);
 }
 
 .logo p span {
     color: red;
-    font-size: 22px;
     font-weight: bold;
-    padding-right: 10px;
+    padding-right: 8px;
 }
 
-.logo p {
-    font-size: 18px;
-    letter-spacing: 4px;
-    color: #555;
+/* NAVIGATION */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(8px, 1.5vw, 18px);
+    justify-content: center;
 }
 
 nav a {
     text-decoration: none;
-    color: black;
-    margin-left: 18px;
+    color: #000;
+    font-size: clamp(13px, 1.3vw, 16px);
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -808,6 +824,20 @@ nav a:hover {
 
 @media (max-width: 480px) {
 
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
     .logo h1 {
         font-size: 26px;
     }
@@ -916,4 +946,5 @@ nav a:hover {
     .biodata-image img {
         max-width: 100%;
     }
+
 }
