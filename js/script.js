@@ -87,3 +87,26 @@ document.getElementById("resumeForm").addEventListener("submit", function (e) {
 
     reader.readAsDataURL(file);
 });
+
+/* ======================
+   HAMBURGER MENU
+====================== */
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.getElementById('main-nav');
+
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+
+/* ======================
+   HEADER SHRINK ON SCROLL
+====================== */
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+        header.classList.add('shrink');
+    } else {
+        header.classList.remove('shrink');
+    }
+});
