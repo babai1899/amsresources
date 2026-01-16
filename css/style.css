@@ -111,14 +111,14 @@
 nav {
     display: flex;
     flex-wrap: wrap;
-    gap: clamp(8px, 1.5vw, 18px);
+    gap: clamp(3px, 1.5vw, 12px);
     justify-content: center;
 }
 
 nav a {
     text-decoration: none;
     color: #000;
-    font-size: clamp(8px, 1.3vw, 13px);
+    font-size: clamp(5px, 1.3vw, 10px);
     white-space: nowrap;
 }
 
@@ -1029,6 +1029,7 @@ nav a:hover {
         border-bottom: 1px solid #eee;
     }
 }
+
 
 
 
