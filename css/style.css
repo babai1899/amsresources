@@ -46,6 +46,17 @@
     flex-wrap: wrap;
 }
 
+/* ======================
+   STICKY HEADER
+====================== */
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
 /* LOGO AREA */
 .logo {
     display: flex;
@@ -75,6 +86,27 @@
     padding-right: 8px;
 }
 
+/* LOGO SMOOTH ANIMATION */
+.logo img,
+.logo h1,
+.logo p {
+    transition: all 0.35s ease;
+}
+
+/* SHRINK EFFECT */
+.header.shrink .logo img {
+    height: 45px;
+}
+
+.header.shrink .logo h1 {
+    font-size: 26px;
+}
+
+.header.shrink .logo p {
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
 /* NAVIGATION */
 nav {
     display: flex;
@@ -92,6 +124,25 @@ nav a {
 
 nav a:hover {
     color: #e4014d;
+}
+
+/* ======================
+   HAMBURGER MENU
+====================== */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background: #000;
+    transition: 0.3s;
 }
 
 /* HERO */
@@ -947,4 +998,31 @@ nav a:hover {
         max-width: 100%;
     }
 
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        padding: 15px 0;
+        border-top: 1px solid #ddd;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 12px;
+        font-size: 16px;
+        border-bottom: 1px solid #eee;
+    }
 }
