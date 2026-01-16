@@ -122,6 +122,11 @@ nav a {
     white-space: nowrap;
 }
 
+nav a.active {
+    color: #e4014d;
+    font-weight: bold;
+}
+
 nav a:hover {
     color: #e4014d;
 }
@@ -1030,6 +1035,30 @@ nav a:hover {
     }
 }
 
+/* DARK MODE */
+.dark-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
 
+/* DARK THEME */
+body.dark {
+    background: #121212;
+    color: #f1f1f1;
+}
 
+body.dark header,
+body.dark nav,
+body.dark .footer-section {
+    background: #1e1e1e;
+}
 
+body.dark nav a {
+    color: #ddd;
+}
+
+body.dark nav a.active {
+    color: #f7c600;
+}
