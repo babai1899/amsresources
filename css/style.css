@@ -1008,12 +1008,15 @@ nav a:hover {
     }
 
     nav {
-        display: none;
-        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
         background: #fff;
-        padding: 15px 0;
-        border-top: 1px solid #ddd;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
     nav.active {
@@ -1021,9 +1024,10 @@ nav a:hover {
     }
 
     nav a {
-        padding: 12px;
-        font-size: 16px;
+        padding: 14px;
+        display: block;
         border-bottom: 1px solid #eee;
     }
 }
+
 
