@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AMS Resources | Manpower Consultancy</title>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="/static/assets/ams-logo.png" alt="AMS Logo">
+            <div class="logo-text"><span>AMS</span> RESOURCES</div>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/recruitment">Recruitment Process</a>
+            <a href="/clients">Clients</a>
+            <a href="/current-openings">Current Openings</a>
+            <a href="/contact">Contact Us</a>
+
+            <button class="admin-login-btn" onclick="window.location.href='/login'">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                        class="admin-icon" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor">
+                    <path stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            stroke-width="2" 
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>Login</span>
+            </button>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- RECRUITMENT PROCESS -->
+    <section class="process-section">
+
+        <div class="container">
+
+            <div class="section-header reveal">
+                <h2>Our <span>Recruitment Process</span></h2>
+                <p>
+                    A structured and transparent recruitment journey ensuring
+                    the right talent reaches global opportunities.
+                </p>
+            </div>
+
+            <div class="world-map">
+
+                <img src="/static/assets/World-Map.png" class="map-image">
+            
+                <!-- FLIGHT ROUTES -->
+                <svg class="flight-paths" viewBox="0 0 1200 600">
+
+                    <!-- INDIA → USA -->
+                    <path id="route1"
+                    d="M830 290 Q650 150 200 200"
+                    stroke="#2563eb"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-dasharray="6 6"/>
+
+                    <!-- INDIA → SAUDI -->
+                    <path id="route2"
+                    d="M830 290 Q750 235 720 300"
+                    stroke="#2563eb"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-dasharray="6 6"/>
+
+                    <!-- INDIA → EUROPE -->
+                    <path id="route3"
+                    d="M830 290 Q750 180 650 180"
+                    stroke="#2563eb"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-dasharray="6 6"/>
+
+                    <!-- INDIA → SINGAPORE -->
+                    <path id="route4"
+                    d="M830 290 Q900 300 905 360"
+                    stroke="#2563eb"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-dasharray="6 6"/>
+
+                    <!-- AIRPLANE -->
+                    <text font-size="22">✈
+                        <animateMotion dur="30s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#route1"/>
+                        </animateMotion>
+                    </text>
+                    <text font-size="22">✈
+                        <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#route2"/>
+                        </animateMotion>
+                    </text>
+                    <text font-size="22">✈
+                        <animateMotion dur="20s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#route3"/>
+                        </animateMotion>
+                    </text>
+                    <text font-size="22">✈
+                        <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#route4"/>
+                        </animateMotion>
+                    </text>
+
+                </svg>
+            
+            </div>
+
+            <div class="timeline">
+
+                <!-- AIRPLANE -->
+                <div class="timeline-progress"></div>
+                <div class="timeline-plane">✈</div>
+
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-icon"><i class="fa fa-file-text"></i></div>
+                    <div class="timeline-content">
+                        <h3>Receiving Demand Letter</h3>
+                        <p>Official manpower requirement received from overseas clients.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-icon"><i class="fa fa-search"></i></div>
+                    <div class="timeline-content">
+                        <h3>Scanning Database</h3>
+                        <p>Reviewing our extensive talent database.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-icon"><i class="fa fa-users"></i></div>
+                    <div class="timeline-content">
+                        <h3>Shortlisting Applicants</h3>
+                        <p>Filtering qualified candidates based on job requirements.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-icon"><i class="fa fa-id-card"></i></div>
+                    <div class="timeline-content">
+                        <h3>Character Assessment</h3>
+                        <p>Background verification and personality evaluation.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-icon"><i class="fa fa-comments"></i></div>
+                    <div class="timeline-content">
+                        <h3>Interview & Evaluation</h3>
+                        <p>Conducting interviews and technical assessments.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-icon"><i class="fa fa-heartbeat"></i></div>
+                    <div class="timeline-content">
+                        <h3>Medical Clearance</h3>
+                        <p>Ensuring candidates meet health requirements.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-icon"><i class="fa fa-file"></i></div>
+                    <div class="timeline-content">
+                        <h3>Visa Formalities</h3>
+                        <p>Processing visa documentation and approvals.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-icon"><i class="fa fa-globe"></i></div>
+                    <div class="timeline-content">
+                        <h3>Emigration Procedure</h3>
+                        <p>Completing legal emigration clearances.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-icon"><i class="fa fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <h3>Pre-departure Orientation</h3>
+                        <p>Guidance and training before international travel.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-icon"><i class="fa fa-plane"></i></div>
+                    <div class="timeline-content">
+                        <h3>The Life-Changing Flight</h3>
+                        <p>Candidates depart for overseas employment.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-icon"><i class="fa fa-star"></i></div>
+                    <div class="timeline-content">
+                        <h3>Client Feedback</h3>
+                        <p>Continuous follow-up ensuring satisfaction.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer reveal" data-aos="fade-up">
+
+        <div class="container footer-container">
+    
+            <!-- COMPANY INFO -->
+            <div class="footer-col footer-company">
+    
+                <div class="footer-logo">
+                    <img src="/static/assets/AMS logo.jpg" alt="AMS Resources logo">
+                    <h3>AMS Resources</h3>
+                </div>
+    
+                <p>
+                    AMS Resources is a leading manpower consultancy delivering
+                    recruitment solutions across multiple industries in India
+                    and overseas countries.
+                </p>
+    
+                <div class="footer-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-whatsapp"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                </div>
+    
+            </div>
+    
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+    
+                <h4>Quick Links</h4>
+    
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/recruitment">Recruitment Process</a></li>
+                    <li><a href="/clients">Clients</a></li>
+                    <li><a href="/current-openings">Current Openings</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+    
+            </div>
+    
+            <!-- SERVICES -->
+            <div class="footer-col">
+    
+                <h4>Our Services</h4>
+    
+                <ul>
+                    <li>Manpower Recruitment</li>
+                    <li>Overseas Hiring</li>
+                    <li>Industrial Workforce</li>
+                    <li>Executive Search</li>
+                    <li>Contract Staffing</li>
+                </ul>
+    
+            </div>
+    
+            <!-- CONTACT -->
+            <div class="footer-col">
+    
+                <h4>Contact</h4>
+    
+                <p>📍 
+                    172/1 Nalini Apartment,<br>
+                    Bidhanpally, Kolkata, WB,<br>
+                    India, 700084
+                </p>
+    
+                <p>📧 info@amsresources.com</p>
+                <p>📞 033 2410 0189</p>
+    
+            </div>
+    
+        </div>
+    
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+    
+            <p>© 2026 AMS Resources. All Rights Reserved.</p>
+    
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+    
+        </div>
+    
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration:1000,
+            once:true
+        });
+
+        /* ===============================
+           STAGGER SCROLL REVEAL
+        ================================ */
+        
+        const reveals = document.querySelectorAll(".reveal");
+        
+        function revealOnScroll(){
+        
+            const windowHeight = window.innerHeight;
+            const revealPoint = 120;
+        
+            reveals.forEach(el => {
+        
+                const revealTop = el.getBoundingClientRect().top;
+        
+                if(revealTop < windowHeight - revealPoint){
+        
+                    const delay = el.getAttribute("data-delay") || 0;
+        
+                    setTimeout(()=>{
+                        el.classList.add("active");
+                    }, delay);
+        
+                }
+        
+            });
+        
+        }
+        
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
+
+        /* ===============================
+           NAV BAR SCROLLING
+        ================================ */
+
+        const navbar = document.querySelector(".navbar");
+        
+        window.addEventListener("scroll", () => {
+        
+            if(window.scrollY > 40){
+                navbar.classList.add("scrolled");
+            }else{
+                navbar.classList.remove("scrolled");
+            }
+        
+        });
+        
+    </script>
+</body>
+</html>

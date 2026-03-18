@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+
+    --x: calc(var(--posX, 0)*1px);
+    --y: calc(var(--posY, 0)*1px);
+
+    background-image: 
+    linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)), 
+    radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), rgb(200 200 200), rgb(022 000 045)), 
+    radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), rgb(250 255 000), rgb(036 000 000)), 
+    radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(020 175 125), rgb(000 010 255)), 
+    radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255 077 000), rgb(000 200 255)), 
+    linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
+    
+    background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+}
+
+/* Blur glow behind card */
+
+.bg-blur {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #1e90ff55, transparent);
+    filter: blur(120px);
+}
+
+/* Login Card */
+
+.login-container {
+
+    width: 360px;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    z-index: 2;
+}
+
+/* Logo */
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.logo h2 {
+    font-weight: 600;
+}
+
+.logo p {
+    font-size: 13px;
+    opacity: .7;
+}
+
+/* Floating Inputs */
+
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+
+    width: 100%;
+    padding: 12px 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+
+    outline: none;
+}
+
+.input-group label {
+
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    pointer-events: none;
+
+    transition: .3s;
+    opacity: .7;
+}
+
+.input-group input:focus+label,
+.input-group input:valid+label {
+
+    top: -8px;
+    font-size: 11px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* LOGIN BUTTON */
+
+.login-btn {
+    position: relative;
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, #1e90ff, #5f5fff);
+    color: white;
+
+    font-weight: 600;
+    font-size: 14px;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    transition: .3s;
+}
+
+/* Glow hover */
+
+.login-btn:hover {
+    box-shadow:
+        0 0 10px rgba(30, 144, 255, 0.7),
+        0 0 25px rgba(95, 95, 255, 0.5);
+}
+
+/* Spinner */
+
+.spinner {
+    width: 18px;
+    height: 18px;
+
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+
+    display: none;
+    animation: spin .7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Progress Bar */
+
+.progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0%;
+    height: 3px;
+
+    background: white;
+    opacity: .8;
+}
+
+/* LOADING STATE */
+
+.login-btn.loading .spinner {
+    display: block;
+}
+
+.login-btn.loading .btn-text {
+    content: "Signing in...";
+}
+
+.login-btn.loading {
+    pointer-events: none;
+}
+
+.login-btn.loading .progress {
+    animation: progressMove 2s linear forwards;
+}
+
+@keyframes progressMove {
+    0% {
+        width: 0%
+    }
+
+    100% {
+        width: 100%
+    }
+}

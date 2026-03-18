@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AMS Resources | Manpower Consultancy</title>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="/static/assets/ams-logo.png" alt="AMS Logo">
+            <div class="logo-text"><span>AMS</span> RESOURCES</div>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/recruitment">Recruitment Process</a>
+            <a href="/clients">Clients</a>
+            <a href="/current-openings">Current Openings</a>
+            <a href="/contact">Contact Us</a>
+
+            <button class="admin-login-btn" onclick="window.location.href='/login'">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                        class="admin-icon" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor">
+                    <path stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            stroke-width="2" 
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>Login</span>
+            </button>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- MARQUEE --> 
+    <div class="notification-bar">
+        <div class="notification-text" id="marqueeText">
+            🚀 Welcome to AMS Resources | Hiring Across India | Call Us Today for Staffing Solutions | Trusted Manpower Consultancy 🇮🇳
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="/static/assets/hero.mp4" type="video/mp4">
+            </video>
+    
+            <h1>People are the Strength of Every Organization</h1>
+            <p>
+                End-to-end manpower solutions across India. We connect world-class
+                talent with industry leaders.
+            </p>
+    
+            <div class="hero-buttons">
+                <a href="#">Hire Talent</a>
+                <a href="#">View Jobs</a>
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="section reveal" data-aos="fade-up">
+        <div class="container">
+            <h2>Industries We Serve</h2>
+
+            <div class="cards">
+                <div class="card reveal-scale" data-aos="zoom-in" style="--i:1"><div class="icon">🏥</div><h3>Healthcare</h3></div>
+                <div class="card reveal-scale" data-aos="zoom-in" style="--i:2"><div class="icon">💻</div><h3>IT & Tech</h3></div>
+                <div class="card reveal-scale" data-aos="zoom-in" style="--i:3"><div class="icon">🏗️</div><h3>Engineering</h3></div>
+                <div class="card reveal-scale" data-aos="zoom-in" style="--i:4"><div class="icon">🏭</div><h3>Oil & Gas</h3></div>
+                <div class="card reveal-scale" data-aos="zoom-in" style="--i:5"><div class="icon">⚓</div><h3>Marine</h3></div>
+                <div class="card reveal-scale" data-aos="zoom-in" style="--i:6"><div class="icon">✈️</div><h3>Aviation</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="shortAboutCompany">
+
+        <div class="container about-container">
+    
+            <!-- Left Content -->
+            <div class="about-text">
+                <h2 class="reveal" data-delay="0">About AMS Resources</h2>
+    
+                <p class="reveal" data-delay="150">
+                    AMS Resources is a leading Human Resources consulting and recruitment firm
+                    in India. We provide end-to-end manpower solutions supplying talent at all
+                    levels—from administrative and marketing roles to skilled industrial workforce.
+                </p>
+    
+                <ul class="about-list">
+                    <li class="reveal" data-delay="300"><span class="check">✔</span> Strong Pan-India Candidate Database</li>
+                    <li class="reveal" data-delay="450"><span class="check">✔</span> Reliable & Customized Solutions</li>
+                    <li class="reveal" data-delay="600"><span class="check">✔</span> Associate Offices Across Major Regions</li>
+                </ul>
+    
+                <a href="/about" class="view-more-btn reveal" data-delay="750">
+                    See More
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+    
+            <!-- Right Image -->
+            <div class="about-image reveal" data-delay="300">
+                <img src="/static/assets/Outsourcing.png" alt="About AMS">
+            </div>
+    
+        </div>
+    
+    </section>
+
+    <!-- CLIENTS SECTION -->
+    <section class="clients-section reveal" data-aos="fade-up" id="ourClients">
+        <div class="container">
+
+            <h2>Our Clients</h2>
+            <p class="clients-subtitle">Trusted by leading companies across industries</p>
+            
+            <div class="logo-slider">
+
+                <div class="logo-track">
+            
+                    <div class="logo-item">
+                        <img src="/static/clients/sinopeclogo.png">
+                    </div>
+            
+                    <div class="logo-item">
+                        <img src="/static/clients/almen_logo.jpg">
+                    </div>
+            
+                    <div class="logo-item">
+                        <img src="/static/clients/alarkanlogo.png">
+                    </div>
+            
+                    <div class="logo-item">
+                        <img src="/static/clients/NMDC Energylogo.png">
+                    </div>
+            
+                    <div class="logo-item">
+                        <img src="/static/clients/JELlogo.png">
+                    </div>
+            
+                    <!-- duplicates -->
+                    <div class="logo-item">
+                        <img src="/static/clients/sinopeclogo.png">
+                    </div>
+            
+                    <div class="logo-item">
+                        <img src="/static/clients/almen_logo.jpg">
+                    </div>
+            
+                    <div class="logo-item">
+                        <img src="/static/clients/alarkanlogo.png">
+                    </div>
+            
+                    <div class="logo-item">
+                        <img src="/static/clients/NMDC Energylogo.png">
+                    </div>
+            
+                    <div class="logo-item">
+                        <img src="/static/clients/JELlogo.png">
+                    </div>
+            
+                </div>
+            
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- TESTIMONIAL SECTION -->
+    <section class="testimonial-section reveal" id="testimonial-section" data-aos="fade-up">
+        <div class="wave-bg"></div>
+
+        <h2 class="section-title">What Our Clients Say</h2>
+
+        <div class="testimonial-container">
+            <div class="testimonial-track">
+
+                <div class="testimonial-card">
+
+                    <div class="client-avatar">
+                        <img src="/static/assets/client1.jpg" alt="John Smith">
+                    </div>
+                
+                    <p>"Outstanding recruitment service. Highly professional and reliable team."</p>
+                
+                    <h4>- John Smith</h4>
+                    <span>HR Manager</span>
+                
+                </div>            
+
+                <div class="testimonial-card">
+
+                    <div class="client-avatar">
+                        <img src="/static/assets/client2.jpg" alt="Sarah Williams">
+                    </div>
+
+                    <p>"They helped us hire top-quality candidates in record time."</p>
+                    <h4>- Sarah Williams</h4>
+                    <span>Operations Head</span>
+                </div>
+
+                <div class="testimonial-card">
+
+                    <div class="client-avatar">
+                        <img src="/static/assets/client3.jpg" alt="David Brown">
+                    </div>
+
+                    <p>"Excellent communication and seamless hiring process."</p>
+                    <h4>- David Brown</h4>
+                    <span>CEO</span>
+                </div>
+
+            </div>
+
+            <!-- Arrows -->
+            <button class="arrow left">&#10094;</button>
+            <button class="arrow right">&#10095;</button>
+
+            <!-- Dots -->
+            <div class="dots"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer reveal" data-aos="fade-up">
+
+        <div class="container footer-container">
+    
+            <!-- COMPANY INFO -->
+            <div class="footer-col footer-company">
+    
+                <div class="footer-logo">
+                    <img src="/static/assets/AMS logo.jpg" alt="AMS Resources logo">
+                    <h3>AMS Resources</h3>
+                </div>
+    
+                <p>
+                    AMS Resources is a leading manpower consultancy delivering
+                    recruitment solutions across multiple industries in India
+                    and overseas countries.
+                </p>
+    
+                <div class="footer-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-whatsapp"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                </div>
+    
+            </div>
+    
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+    
+                <h4>Quick Links</h4>
+    
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/recruitment">Recruitment Process</a></li>
+                    <li><a href="/clients">Clients</a></li>
+                    <li><a href="/current-openings">Current Openings</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+    
+            </div>
+    
+            <!-- SERVICES -->
+            <div class="footer-col">
+    
+                <h4>Our Services</h4>
+    
+                <ul>
+                    <li>Manpower Recruitment</li>
+                    <li>Overseas Hiring</li>
+                    <li>Industrial Workforce</li>
+                    <li>Executive Search</li>
+                    <li>Contract Staffing</li>
+                </ul>
+    
+            </div>
+    
+            <!-- CONTACT -->
+            <div class="footer-col">
+    
+                <h4>Contact</h4>
+    
+                <p>📍 
+                    172/1 Nalini Apartment,<br>
+                    Bidhanpally, Kolkata, WB,<br>
+                    India, 700084
+                </p>
+    
+                <p>📧 info@amsresources.com</p>
+                <p>📞 033 2410 0189</p>
+    
+            </div>
+    
+        </div>
+    
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+    
+            <p>© 2026 AMS Resources. All Rights Reserved.</p>
+    
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+    
+        </div>
+    
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration:1000,
+            once:true
+        });
+    </script>
+    <script>
+
+        /* ===============================
+           STAGGER SCROLL REVEAL
+        ================================ */
+        
+        const reveals = document.querySelectorAll(".reveal");
+        
+        function revealOnScroll(){
+        
+            const windowHeight = window.innerHeight;
+            const revealPoint = 120;
+        
+            reveals.forEach(el => {
+        
+                const revealTop = el.getBoundingClientRect().top;
+        
+                if(revealTop < windowHeight - revealPoint){
+        
+                    const delay = el.getAttribute("data-delay") || 0;
+        
+                    setTimeout(()=>{
+                        el.classList.add("active");
+                    }, delay);
+        
+                }
+        
+            });
+        
+        }
+        
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
+        
+    </script>
+    <script>
+
+        const navbar = document.querySelector(".navbar");
+        
+        window.addEventListener("scroll", () => {
+        
+            if(window.scrollY > 40){
+                navbar.classList.add("scrolled");
+            }else{
+                navbar.classList.remove("scrolled");
+            }
+        
+        });
+        
+        </script>
+</body>
+</html>

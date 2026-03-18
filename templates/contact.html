@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AMS Resources | Manpower Consultancy</title>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="/static/assets/ams-logo.png" alt="AMS Logo">
+            <div class="logo-text"><span>AMS</span> RESOURCES</div>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/recruitment">Recruitment Process</a>
+            <a href="/clients">Clients</a>
+            <a href="/current-openings">Current Openings</a>
+            <a href="/contact">Contact Us</a>
+
+            <button class="admin-login-btn" onclick="window.location.href='/login'">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                        class="admin-icon" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor">
+                    <path stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            stroke-width="2" 
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>Login</span>
+            </button>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- CONTACT HERO -->
+    <section class="contact-hero">
+
+        <!-- PARTICLES -->
+        <div id="particles-js"></div>
+
+        <div class="contact-hero-content" data-aos="fade-up">
+
+            <h1>Let's Build <span>Global Opportunities</span></h1>
+
+            <p>
+                Connect with AMS Resources for trusted manpower recruitment,
+                overseas hiring solutions, and professional workforce support.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#contact-form" class="btn-primary">Send Message</a>
+                <a href="https://wa.me/919679872219" class="btn-outline">
+                    <i class="fa fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section reveal" data-aos="fade-up">
+
+        <div class="container contact-container">
+
+            <!-- LEFT : CONTACT INFO -->
+            <div class="contact-info" data-aos="fade-right">
+
+                <h2>Get in <span>Touch</span></h2>
+
+                <p>
+                    Looking for manpower solutions or overseas recruitment support?
+                    Our team is ready to assist you with professional guidance.
+                </p>
+
+                <section class="contact-cards">
+
+                    <div class="contact-card">
+                        <i class="fa fa-map-marker"></i>
+                        <h3>Visit Us</h3>
+                        <p>AMS Resources, Nalini Apartment, 172/1,<br>Bidhanpally, Kolkata<br>West Bengal 700084</p>
+                    </div>
+                
+                    <div class="contact-card">
+                        <i class="fa fa-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>info@amsresources.com</p>
+                    </div>
+                
+                    <div class="contact-card">
+                        <i class="fa fa-phone"></i>
+                        <h3>Call Us</h3>
+                        <p>033 2410 0189</p>
+                    </div>
+                
+                    <div class="contact-card">
+                        <i class="fa fa-clock-o"></i>
+                        <h3>Business Hours</h3>
+                        <p>Mon - Fri : 10:00 AM - 6:00 PM<br>
+                        Sat : 10:00 AM - 2:00 PM</p>
+                    </div>
+                
+                </section>
+
+            </div>
+
+            <!-- RIGHT : CONTACT FORM -->
+            <div class="contact-form" data-aos="fade-left" id="contact-form">
+
+                <form>
+
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="tel" placeholder="Phone Number">
+                        <input type="text" placeholder="Subject">
+                    </div>
+
+                    <textarea rows="5" placeholder="Your Message"></textarea>
+
+                    <button type="submit" class="contact-submit-btn">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- MAP -->
+        <div class="contact-map reveal" data-aos="fade-up">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d697.3049037959934!2d88.37223219092215!3d22.468337601947166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1773465832044!5m2!1sen!2sin" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+
+        <div class="contact-widget">
+
+            <div class="contact-options" id="contactOptions">
+        
+                <a href="https://wa.me/919679872219" class="contact-btn whatsapp" target="_blank">
+                    <i class="fa fa-whatsapp"></i>
+                </a>
+        
+                <a href="tel:+913324100189" class="contact-btn call">
+                    <i class="fa fa-phone"></i>
+                </a>
+        
+                <a href="mailto:info@amsresources.com" class="contact-btn email">
+                    <i class="fa fa-envelope"></i>
+                </a>
+        
+            </div>
+        
+            <div class="contact-main" onclick="toggleContact()">
+                <i class="fa fa-comments"></i>
+            </div>
+        
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer reveal" data-aos="fade-up">
+
+        <div class="container footer-container">
+    
+            <!-- COMPANY INFO -->
+            <div class="footer-col footer-company">
+    
+                <div class="footer-logo">
+                    <img src="/static/assets/AMS logo.jpg" alt="AMS Resources logo">
+                    <h3>AMS Resources</h3>
+                </div>
+    
+                <p>
+                    AMS Resources is a leading manpower consultancy delivering
+                    recruitment solutions across multiple industries in India
+                    and overseas countries.
+                </p>
+    
+                <div class="footer-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-whatsapp"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                </div>
+    
+            </div>
+    
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+    
+                <h4>Quick Links</h4>
+    
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/recruitment">Recruitment Process</a></li>
+                    <li><a href="/clients">Clients</a></li>
+                    <li><a href="/current-openings">Current Openings</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+    
+            </div>
+    
+            <!-- SERVICES -->
+            <div class="footer-col">
+    
+                <h4>Our Services</h4>
+    
+                <ul>
+                    <li>Manpower Recruitment</li>
+                    <li>Overseas Hiring</li>
+                    <li>Industrial Workforce</li>
+                    <li>Executive Search</li>
+                    <li>Contract Staffing</li>
+                </ul>
+    
+            </div>
+    
+            <!-- CONTACT -->
+            <div class="footer-col">
+    
+                <h4>Contact</h4>
+    
+                <p>📍 
+                    172/1 Nalini Apartment,<br>
+                    Bidhanpally, Kolkata, WB,<br>
+                    India, 700084
+                </p>
+    
+                <p>📧 info@amsresources.com</p>
+                <p>📞 033 2410 0189</p>
+    
+            </div>
+    
+        </div>
+    
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+    
+            <p>© 2026 AMS Resources. All Rights Reserved.</p>
+    
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+    
+        </div>
+    
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration:1000,
+            once:true
+        });
+
+        /* ===============================
+           STAGGER SCROLL REVEAL
+        ================================ */
+        
+        const reveals = document.querySelectorAll(".reveal");
+        
+        function revealOnScroll(){
+        
+            const windowHeight = window.innerHeight;
+            const revealPoint = 120;
+        
+            reveals.forEach(el => {
+        
+                const revealTop = el.getBoundingClientRect().top;
+        
+                if(revealTop < windowHeight - revealPoint){
+        
+                    const delay = el.getAttribute("data-delay") || 0;
+        
+                    setTimeout(()=>{
+                        el.classList.add("active");
+                    }, delay);
+        
+                }
+        
+            });
+        
+        }
+        
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
+
+        /* ===============================
+           NAV BAR SCROLLING
+        ================================ */
+
+        const navbar = document.querySelector(".navbar");
+        
+        window.addEventListener("scroll", () => {
+        
+            if(window.scrollY > 40){
+                navbar.classList.add("scrolled");
+            }else{
+                navbar.classList.remove("scrolled");
+            }
+        
+        });
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        particlesJS("particles-js",{
+        
+        "particles":{
+        
+        "number":{"value":60},
+        
+        "size":{"value":3},
+        
+        "move":{"speed":1.5},
+        
+        "line_linked":{
+        "enable":true,
+        "distance":150,
+        "color":"#22c55e",
+        "opacity":0.3,
+        "width":1
+        }
+        
+        }
+        
+        });
+    </script>
+    <script>
+        function toggleContact(){
+            document.getElementById("contactOptions").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

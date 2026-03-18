@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AMS Resources | Manpower Consultancy</title>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="/static/assets/ams-logo.png" alt="AMS Logo">
+            <div class="logo-text"><span>AMS</span> RESOURCES</div>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/recruitment">Recruitment Process</a>
+            <a href="/clients">Clients</a>
+            <a href="/current-openings">Current Openings</a>
+            <a href="/contact">Contact Us</a>
+
+            <button class="admin-login-btn" onclick="window.location.href='/login'">
+                <svg xmlns="http://www.w3.org/2000/svg" class="admin-icon" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>Login</span>
+            </button>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- APPLICATION FORM SECTION -->
+    <section class="application-section">
+
+        <div class="app-container">
+
+            <h2>Submit <span>Biodata / CV</span></h2>
+            <p>Fill in your details and apply for opportunities</p>
+
+            <form class="application-form">
+
+                <!-- BASIC DETAILS -->
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Full Name <span>*</span></label>
+                        <input type="text" placeholder="Full Name" id="name" required>
+                        <i class="fa fa-check"></i>
+                        <small class="error-msg">Name is required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Passport Number <span>*</span></label>
+                        <input type="text" placeholder="Passport Number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date of Birth <span>*</span></label>
+                        <input type="date" id="dob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="number" placeholder="Age" id="age" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Passport Type</label>
+                        <select required>
+                            <option value="" disabled selected>Select Type</option>
+                            <option>ECNR</option>
+                            <option>ECR</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Contact Number <span>*</span></label>
+                        <input type="text" placeholder="Contact Number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email ID</label>
+                        <input type="email" placeholder="Email ID">
+                    </div>
+
+                </div>
+
+                <!-- ADDRESS -->
+                <div class="form-group">
+                    <label>Address <span>*</span></label>
+                    <textarea placeholder="Full Address" rows="3" required></textarea>
+                </div>
+
+                <!-- EXPERIENCE -->
+                <div class="form-group">
+                    <label style="margin-top:10px;">Work Experience</label>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <input type="number" id="indiaExp" placeholder="Experience in India (Years)">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" id="gulfExp" placeholder="Experience in Gulf (Years)">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" id="totalExp" placeholder="Total Experience (Years)" readonly>
+                    </div>
+
+                </div>
+
+                <!-- EDUCATION -->
+                <div class="form-group">
+                    <label>Educational Qualification</label>
+                    <input type="text" placeholder="Education Qualification">
+                </div>
+
+                <!-- FILE UPLOAD -->
+                <div class="upload-grid">
+
+                    <div class="upload-box">
+                        <label>Upload CV <span>*</span></label>
+                        <input type="file" required>
+                    </div>
+
+                    <div class="upload-box">
+                        <label>Passport Copy (Front & Back)</label>
+                        <input type="file">
+                    </div>
+
+                    <div class="upload-box">
+                        <label>Passport Size Photo <span>*</span></label>
+                        <input type="file" required>
+                    </div>
+
+                    <div class="upload-box">
+                        <label>Highest Education Certificate</label>
+                        <input type="file">
+                    </div>
+
+                    <div class="upload-box">
+                        <label>Experience Certificate</label>
+                        <input type="file">
+                    </div>
+
+                    <div class="upload-box">
+                        <label>Trade Test / Third Party Certificate</label>
+                        <input type="file">
+                    </div>
+
+                </div>
+
+                <!-- SUBMIT -->
+                <button type="submit" class="apply-submit" id="submitBtn" disabled>
+                    Apply Now
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer reveal" data-aos="fade-up">
+
+        <div class="container footer-container">
+
+            <!-- COMPANY INFO -->
+            <div class="footer-col footer-company">
+
+                <div class="footer-logo">
+                    <img src="/static/assets/AMS logo.jpg" alt="AMS Resources logo">
+                    <h3>AMS Resources</h3>
+                </div>
+
+                <p>
+                    AMS Resources is a leading manpower consultancy delivering
+                    recruitment solutions across multiple industries in India
+                    and overseas countries.
+                </p>
+
+                <div class="footer-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-whatsapp"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                </div>
+
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+
+                <h4>Quick Links</h4>
+
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/recruitment">Recruitment Process</a></li>
+                    <li><a href="/clients">Clients</a></li>
+                    <li><a href="/current-openings">Current Openings</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+
+            </div>
+
+            <!-- SERVICES -->
+            <div class="footer-col">
+
+                <h4>Our Services</h4>
+
+                <ul>
+                    <li>Manpower Recruitment</li>
+                    <li>Overseas Hiring</li>
+                    <li>Industrial Workforce</li>
+                    <li>Executive Search</li>
+                    <li>Contract Staffing</li>
+                </ul>
+
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+
+                <h4>Contact</h4>
+
+                <p>📍
+                    172/1 Nalini Apartment,<br>
+                    Bidhanpally, Kolkata, WB,<br>
+                    India, 700084
+                </p>
+
+                <p>📧 info@amsresources.com</p>
+                <p>📞 033 2410 0189</p>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <p>© 2026 AMS Resources. All Rights Reserved.</p>
+
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        /* ===============================
+           STAGGER SCROLL REVEAL
+        ================================ */
+
+        const reveals = document.querySelectorAll(".reveal");
+
+        function revealOnScroll() {
+
+            const windowHeight = window.innerHeight;
+            const revealPoint = 120;
+
+            reveals.forEach(el => {
+
+                const revealTop = el.getBoundingClientRect().top;
+
+                if (revealTop < windowHeight - revealPoint) {
+
+                    const delay = el.getAttribute("data-delay") || 0;
+
+                    setTimeout(() => {
+                        el.classList.add("active");
+                    }, delay);
+
+                }
+
+            });
+
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
+
+        /* ===============================
+           NAV BAR SCROLLING
+        ================================ */
+
+        const navbar = document.querySelector(".navbar");
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 40) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+
+        });
+
+    </script>
+
+    <script id="xpcalc">
+        const indiaExp = document.querySelector('input[placeholder="Experience in India (Years)"]');
+        const gulfExp = document.querySelector('input[placeholder="Experience in Gulf (Years)"]');
+        const totalExp = document.querySelector('input[placeholder="Total Experience (Years)"]');
+
+        function calculateTotal() {
+            const india = parseFloat(indiaExp.value) || 0;
+            const gulf = parseFloat(gulfExp.value) || 0;
+            totalExp.value = (india + gulf).toFixed(1);
+        }
+
+        // Auto update on input
+        indiaExp.addEventListener("input", calculateTotal);
+        gulfExp.addEventListener("input", calculateTotal);
+
+        // Prevent manual edit
+        totalExp.setAttribute("readonly", true);
+    </script>
+
+    <script>
+        const dobInput = document.getElementById("dob");
+        const ageInput = document.getElementById("age");
+
+        dobInput.addEventListener("change", function () {
+            const dob = new Date(this.value);
+            const today = new Date();
+
+            let age = today.getFullYear() - dob.getFullYear();
+            const m = today.getMonth() - dob.getMonth();
+
+            if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+                age--;
+            }
+
+            ageInput.value = age > 0 ? age : "";
+        });
+    </script>
+    <script>
+        function setError(input, message) {
+            const group = input.parentElement;
+            group.classList.add("error");
+            group.classList.remove("success");
+            group.querySelector(".error-msg").innerText = message;
+        }
+
+        function setSuccess(input) {
+            const group = input.parentElement;
+            group.classList.add("success");
+            group.classList.remove("error");
+        }
+
+        function validateInput(input, condition, message) {
+            if (condition) {
+                setError(input, message);
+            } else {
+                setSuccess(input);
+            }
+        }
+
+        /* FIELD VALIDATIONS */
+
+        const name = document.getElementById("name");
+        const phone = document.querySelector('input[placeholder="Contact Number"]');
+        const email = document.querySelector('input[type="email"]');
+
+        name.addEventListener("input", () => {
+            validateInput(name, name.value.trim() === "", "Name is required");
+        });
+
+        phone.addEventListener("input", () => {
+            validateInput(phone, phone.value.length < 10, "Enter valid number");
+        });
+
+        email.addEventListener("input", () => {
+            const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            validateInput(email, !pattern.test(email.value), "Enter valid email");
+        });
+    </script>
+
+    <!-- MAIN VALIDATION FOR DISABLED SUBMIT -->
+    <script>
+        const submitBtn = document.getElementById("submitBtn");
+
+        function checkFormValidity() {
+
+            const requiredInputs = document.querySelectorAll(
+                ".application-form input[required], .application-form select[required], .application-form textarea[required]"
+            );
+
+            let allValid = true;
+
+            requiredInputs.forEach(input => {
+
+                if (input.type === "file") {
+                    if (input.files.length === 0) {
+                        allValid = false;
+                    }
+                }
+                else if (input.value.trim() === "") {
+                    allValid = false;
+                }
+
+                // also check validation class
+                const parent = input.parentElement;
+                if (parent.classList.contains("error")) {
+                    allValid = false;
+                }
+
+            });
+
+            submitBtn.disabled = !allValid;
+        }
+
+        /* RUN ON EVERY INPUT CHANGE */
+
+        document.querySelectorAll(".application-form input, .application-form select, .application-form textarea")
+            .forEach(el => {
+                el.addEventListener("input", checkFormValidity);
+                el.addEventListener("change", checkFormValidity);
+            });
+    </script>
+</body>
+
+</html>
